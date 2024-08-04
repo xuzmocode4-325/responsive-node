@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{{ title }}</title>
+  <link href="{{ url_for('static', filename='styles/index.css') }}" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8e80545d55.js" crossorigin="anonymous"></script>
+  <script 
+  language="javascript" 
+  type="text/javascript" 
+  src="{{ url_for('static', filename='scripts/dependencies/p5.js') }}">
+</script>
+<script 
+  language="javascript" 
+  type="text/javascript" 
+  src="{{ url_for('static', filename='scripts/dependencies/p5.sound.js') }}">
+</script>
+</head>
+<body>
+  <nav class="nav-links">
+    <p><a href ="/">Home</a></p>
+    <p><a href ="/gallery">Gallery</a></p>
+    <p><a href ="/linknode">Linknode</a></p>
+  </nav>
+  <main>
+    <h2 class="heading art-heading">
+      Showcasing: {{ title }}
+    </h2>
+    <div id="art-div" class="art-div">
+      <script 
+          language="javascript" 
+          src="{{ url_for('static', filename=script) }}">
+      </script>
+    </div>
+  </main>
+</body>
+</html>
